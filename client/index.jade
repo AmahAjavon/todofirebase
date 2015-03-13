@@ -2,9 +2,36 @@ doctype html
 html(lang='en')
   head
     meta(charset='utf-8')
-    title Prototype
+    title To-do-list
     link(rel='stylesheet', href='/style.css')
   body
-    h1 Hello, World
+    h1 AJ TO DO LIST
+    .container
+      p Title
+      input(type='text' id='title' placeholder='Title')
+      p Date
+      input(type='date' id='date' placeholder='Date')
+      p Priority
+      select#priority
+        option(value="high") High
+        option(value="med") Med
+        option(value="low") Low
+            
+      button#add Save
+      
+    .container
+      p Tasks
+      table#table
+        thead
+          tr#trow
+            col(class="col-span4")
+            th Title
+            th Due
+            th Priority
+            th Is complete?
+            th Complete
+        tbody#tbody
+
+    script(src='https://cdn.firebase.com/js/client/2.2.1/firebase.js')
     script(src='/vendor/jquery/dist/jquery.js')
     script(src='/main.js')
